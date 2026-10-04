@@ -3,7 +3,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField] Transform target;
-    [SerializeField] Vector3 offset = new Vector3(0, 4, -7);
+    [SerializeField] Vector3 offset = new Vector3(10, 5, 0);
     [SerializeField] float smoothSpeed = 5f;
 
     void LateUpdate()

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8134504088795911826}
   - component: {fileID: 2799188264062105825}
   - component: {fileID: 6255568622264525514}
-  - component: {fileID: 2570763176306910438}
   m_Layer: 0
   m_Name: SM_Buildings_Ramp_45_1x1_01 (1)
   m_TagString: Untagged
@@ -30,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7031591, z: -0, w: 0.71103257}
   m_LocalPosition: {x: -2.05, y: 0.0000008940697, z: 15.09}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -114,24 +113,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: e773e5e2f9670824bad8b836f8425d2c, type: 3}
---- !u!65 &2570763176306910438
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7787814551447333667}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1.0001404, z: 1}
-  m_Center: {x: 0.5, y: 0.5000702, z: 0.5}

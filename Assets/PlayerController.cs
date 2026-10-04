@@ -8,12 +8,17 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
     bool isGrounded, jumpQueued;
 
-    void Awake()
-    {
-        rb = GetComponent<Rigidbody>();
-        rb.freezeRotation = true;
-        rb.interpolation = RigidbodyInterpolation.Interpolate;
-    }
+Rigidbody rb;
+Transform cam;
+bool isGrounded, jumpQueued;
+
+void Awake()
+{
+    rb = GetComponent<Rigidbody>();
+    cam = Camera.main.transform;
+    rb.freezeRotation = true;
+    rb.interpolation = RigidbodyInterpolation.Interpolate;
+}
 
     void Update()
     {
@@ -25,7 +30,13 @@ public class PlayerController : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
-        Vector3 move = new Vector3(h, 0, v);
+        Vector3 camForward = cam.forward;
+        camForward.y = 0;
+        camForward.Normalize();
+        Vector3 camRight = cam.right;
+        camRight.y = 0;
+        camRight.Normalize();
+        Vector3 move = camForward * v + camRight * h;
         move = Vector3.ClampMagnitude(move, 1f) * speed;
         rb.linearVelocity = new Vector3(
             move.x, rb.linearVelocity.y, move.z);
