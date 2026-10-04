@@ -7,18 +7,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float jumpForce = 6f;
     Rigidbody rb;
     bool isGrounded, jumpQueued;
+    Transform cam;
 
-Rigidbody rb;
-Transform cam;
-bool isGrounded, jumpQueued;
-
-void Awake()
-{
-    rb = GetComponent<Rigidbody>();
-    cam = Camera.main.transform;
-    rb.freezeRotation = true;
-    rb.interpolation = RigidbodyInterpolation.Interpolate;
-}
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+        cam = Camera.main.transform;
+        rb.freezeRotation = true;
+        rb.interpolation = RigidbodyInterpolation.Interpolate;
+    }
 
     void Update()
     {
